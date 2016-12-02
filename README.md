@@ -39,5 +39,3 @@
  * OnHit() - When hit by a bullet
  * OnEnemySpot() - When your turret is directly face to an enemy (there seems no reason not to fire!)
 
-## Credits
-Special thanks to Martain Chen, Tim Chen, BinBin Tasi, Sid Wang, Louh Ren-Shan and 豬大寶 for mathematic support.
