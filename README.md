@@ -1,22 +1,3 @@
-
-## Robot HOWTO
-
-### Available info:
-
- * Self info
-   * @me.id
-   * @me.x
-   * @me.y
-   * @me.hp
-   * @me.angle - Your current angle (tank angle + turret angle)
-   * @me.tank_angle
-   * @me.turret_angle
-
- * Enemy info
-   * @enemy-spot[N].id
-   * @enemy-spot[N].hp
-   * @enemy-spot[N].angle - The angle (direction) to the enemy
-
 ### Sequential Actions:
 
  * @turn_left (angle)
