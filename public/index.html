@@ -4,17 +4,24 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <script type="text/javascript" src="log.js"></script>
         <script type="text/javascript" src="battle.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
-                var canvas = $("#arena");
-                var battle = new Battle(
-                    canvas[0].getContext("2d"),
-                    canvas.attr("width"),
-                    canvas.attr("height"),
-                    ['./robot/enemy.js', './robot/myrobot.js']
-                );
-                battle.run();
+        var createBattle = function( result ) {
+            var canvas = $("#arena");
+            var battle = new Battle(
+                canvas[0].getContext("2d"),
+                canvas.attr("width"),
+                canvas.attr("height"),  
+                JSON.parse(result)
+            );
+            battle.run(); 
+        }
+        $(document).ready(function() {
+            $.get({
+                url: "/robots",
+                success: createBattle
             });
+        });        
         </script>
         <style type="text/css">
             #arena {
