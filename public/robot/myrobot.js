@@ -3,19 +3,34 @@
   var Boss0, tr;
   importScripts('../base-robot.js');
   Boss0 = (function(superclass){
-    var prototype = extend$((import$(Boss0, superclass).displayName = 'Boss0', Boss0), superclass).prototype, constructor = Boss0;
+    var i, prototype = extend$((import$(Boss0, superclass).displayName = 'Boss0', Boss0), superclass).prototype, constructor = Boss0;
+    i = 0;
     Boss0.prototype.onIdle = function(){
-      this.turn_turret_right(45);
+      this.shoot();
       this.move_forwards(50);
+      this.turn_left(30);
+      this.turn_turret_left(50);
+      this.shoot();
     };
     Boss0.prototype.onWallCollide = function(){
-      this.yell("O'snap!");
+      this.yell("Auch!");
+      this.move_opposite(50);
+      this.turn_left(45);
+      this.move_forwards(50);
     };
     Boss0.prototype.onHit = function(){
-      this.yell("Oops!");
+      this.yell("Oh no!");
+      this.turn_left(40);
+      this.move_forwards(50);
     };
     Boss0.prototype.onEnemySpot = function(){
-      this.yell("Fire!");
+      this.yell("Gotcha!");
+      this.shoot();
+      this.move_backwards(10);
+      this.shoot();
+      this.turn_turret_right(20);
+      this.shoot();
+      console.log("FIENDENS VINKEL: " + this.enemySpot[0].angle);
     };
     function Boss0(){
       Boss0.superclass.apply(this, arguments);

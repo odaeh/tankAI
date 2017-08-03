@@ -8,7 +8,7 @@
   $MAX_BULLET = 5;
   $BULLET_INTERVAL = 15;
   $YELL_TIMEOUT = 50;
-  $SEQUENTIAL_EVENTS = ['move_forwards', 'move_backwards', 'turn_left', 'turn_right', 'move_opposide'];
+  $SEQUENTIAL_EVENTS = ['move_forwards', 'move_backwards', 'turn_left', 'turn_right', 'move_opposite'];
   $PARALLEL_EVENTS = ['shoot', 'turn_turret_left', 'turn_turret_right', 'turn_radar_left', 'turn_radar_right'];
   $CANVAS_DEBUG = false;
   AssetsLoader = (function(){
@@ -356,7 +356,7 @@
               break;
             }
             break;
-          case "move_opposide":
+          case "move_opposite":
             event["progress"]++;
             this.move(-this.actionToCollide);
             if (this.status.wallCollide) {

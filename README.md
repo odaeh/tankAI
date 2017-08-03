@@ -4,7 +4,7 @@
  * @turn_right (angle)
  * @move_forwards (distance)
  * @move_backwards (distance)
- * @move_opposide (distance) - This action can only be used in OnWallCollide()
+ * @move_opposite (distance) - This action can only be used in OnWallCollide()
 
 ### Parallel Actions:
 

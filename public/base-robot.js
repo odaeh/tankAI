@@ -36,10 +36,10 @@
         "amount": distance
       }, callback);
     };
-    prototype.move_opposide = function(distance, callback){
+    prototype.move_opposite = function(distance, callback){
       callback == null && (callback = null);
       this.send({
-        "action": "move_opposide",
+        "action": "move_opposite",
         "amount": distance
       }, callback);
     };

@@ -12,7 +12,7 @@
       this.shoot();
     };
     Boss1.prototype.onWallCollide = function(){
-      this.move_opposide(10);
+      this.move_opposite(10);
       this.turn_left(90);
       this.move_forwards(100);
     };

@@ -10,7 +10,7 @@ class Boss1 extends BaseRobot
     @shoot!
 
   onWallCollide: !->
-    @move_opposide 10
+    @move_opposite 10
     @turn_left 90
     @move_forwards 100
 
@@ -18,7 +18,6 @@ class Boss1 extends BaseRobot
     @yell "Oops!"
     @move_backwards 100
     @shoot!
-
 
   onEnemySpot: !->
     @yell "Fire!"
